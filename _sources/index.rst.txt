@@ -6,6 +6,8 @@
 Welcome to my-pkg's documentation!
 ==================================
 
+This is my documentation. It explains things. I hope you find it useful.
+
 .. toctree::
    :maxdepth: 2
 
