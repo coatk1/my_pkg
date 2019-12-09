@@ -6,16 +6,17 @@ python:
   - 3.5
 install:
   - pip install -e .[dev]
-script:
-  - pytest
-  - sphinx-build -n -b html -d docs/build/doctrees docs/source docs/build/html
-  - touch docs/build/html/.nojekyll
-
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  keep-history: true
-  on:
-    branch: master
-  local_dir: docs/build/html
+jobs:
+  include:
+    script: pytest
+    script: sphinx-build -n -b html -d docs/build/doctrees docs/source docs/build/html
+    script: touch docs/build/html/.nojekyll
+    stage: GH Pages
+    deploy:
+      provider: pages
+      skip_cleanup: true
+      github_token: $GITHUB_TOKEN
+      keep-history: true
+        on:
+          branch: master
+      local_dir: docs/build/html
