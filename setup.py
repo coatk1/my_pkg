@@ -18,7 +18,7 @@ setup(
             'sphinx',
             'sphinxcontrib-napoleon'
         ]
-    }
+    },
     keywords='my_pkg',
     classifiers=[
         'Programming Language :: Python :: 3.6',
