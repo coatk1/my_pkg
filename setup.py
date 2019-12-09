@@ -2,8 +2,6 @@ from setuptools import setup
 import versioneer
 
 requirements = [
-    'sphinx',
-    'sphinxcontrib-napoleon'
 ]
 
 setup(
@@ -14,6 +12,13 @@ setup(
     author_email='CurtLHampton@gmail.com',
     packages=['my_pkg'],
     install_requires=requirements,
+    extras_require={
+        'dev': [
+            'pytest',
+            'sphinx',
+            'sphinxcontrib-napoleon'
+        ]
+    },
     keywords='my_pkg',
     classifiers=[
         'Programming Language :: Python :: 3.6',

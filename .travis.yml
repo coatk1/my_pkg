@@ -5,7 +5,7 @@ python:
   - 3.6
   - 3.5
 install:
-  - pip install .
+  - pip install -e .[dev]
 script:
   - pytest
   - sphinx-build -n -b html -d docs/build/doctrees docs/source docs/build/html
