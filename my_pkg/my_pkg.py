@@ -10,7 +10,8 @@ def add(x, y):
 
     Returns
     -------
-    The first number plus the second number
+    z : int
+        The first number plus the second number
 
     Example
     -------
@@ -30,7 +31,8 @@ def subtract(x, y):
 
     Returns
     -------
-    The first number minus the second number
+    z : int
+        The first number minus the second number
 
     Example
     -------
