@@ -1,2 +1,0 @@
-include versioneer.py
-include prism/_version.py
