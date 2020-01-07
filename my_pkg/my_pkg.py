@@ -1,5 +1,5 @@
 def add(x, y):
-    """Add two numbers together.
+    """Add two numbers together...
 
     Parameters
     ----------
