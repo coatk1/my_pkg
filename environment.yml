@@ -7,3 +7,5 @@ dependencies:
   - pytest
   - sphinx
   - sphinxcontrib-napoleon
+  - black
+  - flake8

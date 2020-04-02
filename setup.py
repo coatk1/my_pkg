@@ -1,8 +1,8 @@
 from setuptools import setup
 import versioneer
 
-requirements = [
-]
+with open("requirements.txt") as f:
+    requirements = f.read().splitlines()
 
 setup(
     name='my_pkg',

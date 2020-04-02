@@ -1,3 +1,3 @@
-[![Build Status](https://travis-ci.org/CurtLH/my_pkg.svg?branch=master)](https://travis-ci.org/CurtLH/my_pkg)
+![Python package](https://github.com/CurtLH/my_pkg/workflows/Python%20package/badge.svg)
 
 # My Package
