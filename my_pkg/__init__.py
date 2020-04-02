@@ -1,5 +1,5 @@
 from my_pkg.my_pkg import add
-from my_pkg.my_pg import subtract
+from my_pkg.my_pkg import subtract
 
 __all__ = ["add", "subtract"]
 
