@@ -12,8 +12,8 @@ setup(
     author_email="CurtLHampton@gmail.com",
     packages=["my_pkg"],
     install_requires=requirements,
-    entry_points={"console_scripts": ["my_pkg=my_pkg.cli:my_pkg",],},
+    entry_points={"console_scripts": ["my_pkg=my_pkg.cli:my_pkg"]},
     extras_require={"dev": ["pytest", "sphinx", "sphinxcontrib-napoleon"]},
     keywords="my_pkg",
-    classifiers=["Programming Language :: Python :: 3.6", "Programming Language :: Python :: 3.7",],
+    classifiers=["Programming Language :: Python :: 3.6", "Programming Language :: Python :: 3.7"]
 )

@@ -1,4 +1,7 @@
-from my_pkg.my_pkg import *
+from my_pkg.my_pkg import add
+from my_pkg.my_pg import subtract
+
+__all__ = ["add", "subtract"]
 
 from ._version import get_versions
 
