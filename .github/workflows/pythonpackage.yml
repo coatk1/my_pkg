@@ -34,6 +34,12 @@ jobs:
         pip install pytest
         pip install .
         pytest
+    - name: Upload dist
+      uses: actions/upload-artifact@master
+      with:
+        name: pypi-dist
+        path: dist
+
   upload:
     name: upload_pypi
     needs: build
@@ -43,6 +49,11 @@ jobs:
       matrix:
         python-version: [3.7]
     steps:
+    - name: Download dist
+      uses: actions/download-artifact@master
+      with:
+        name: pypi-dist
+        path: .
     - name: Publish package
       uses: pypa/gh-action-pypi-publish@master
       with:
