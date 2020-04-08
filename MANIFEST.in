@@ -1,2 +1,2 @@
 include versioneer.py
-include prism/_version.py
+include my_pkg/_version.py
