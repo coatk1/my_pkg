@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    name: build_package
+    name: Build Python Package
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -49,7 +49,7 @@ jobs:
 
 
   upload:
-    name: upload_pypi
+    name: Upload to PyPI
     needs: build
     if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
     runs-on: ubuntu-latest
