@@ -36,15 +36,14 @@ jobs:
         pytest
   upload:
     name: upload_pypi
-    needs:
-      - build
+    needs: build
+    if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: [3.7]
     steps:
     - name: Publish package
-      if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
       uses: pypa/gh-action-pypi-publish@master
       with:
         user: __token__
