@@ -5,7 +5,7 @@ with open("requirements.txt") as f:
     requirements = f.read().splitlines()
 
 setup(
-    name="my_pkg",
+    name="my_pkg_478",
     version=versioneer.get_version(),
     description="My package",
     author="Curtis Hampton",
@@ -13,7 +13,7 @@ setup(
     packages=["my_pkg"],
     install_requires=requirements,
     entry_points={"console_scripts": ["my_pkg=my_pkg.cli:my_pkg"]},
-    extras_require={"dev": ["pytest", "sphinx", "sphinxcontrib-napoleon"]},
+    extras_require={"dev": ["pytest", "sphinx"]},
     keywords="my_pkg",
     classifiers=["Programming Language :: Python :: 3.6", "Programming Language :: Python :: 3.7"],
 )
