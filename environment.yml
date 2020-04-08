@@ -9,3 +9,5 @@ dependencies:
   - sphinxcontrib-napoleon
   - black
   - flake8
+  - pytest
+  - pytest-cov
