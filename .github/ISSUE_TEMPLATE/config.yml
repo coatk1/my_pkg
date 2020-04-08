@@ -1,0 +1,10 @@
+blank_issues_enabled: false
+contact_links:
+
+  - name: Flake8
+    url: https://flake8.pycqa.org/en/latest/
+    about: For more information on Flake8.
+    
+  - name: PyTest
+    url: https://docs.pytest.org/en/latest/
+    about: For more information on PyTest.
