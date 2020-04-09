@@ -84,6 +84,10 @@ jobs:
       with:
         name: sphinx-docs
         path: build/html
+    - name: Check folder
+      run: |
+        pwd
+        ls -lh
     - name: Deploy to gh-pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
