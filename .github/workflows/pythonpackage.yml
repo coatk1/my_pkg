@@ -55,7 +55,7 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: sphinx-docs
-        path: build/html
+        path: docs/build/html
 
   upload:
     name: PyPI and gh-pages
