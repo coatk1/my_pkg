@@ -51,10 +51,14 @@ jobs:
         cd docs
         make html
         touch build/html/.nojekyll
-
+    - name: Upload docs
+      uses: actions/upload-artifact@master
+      with:
+        name: sphinx-docs
+        path: build/html
 
   upload:
-    name: Upload to PyPI
+    name: PyPI and gh-pages
     needs: build
     if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
     runs-on: ubuntu-latest
@@ -72,3 +76,15 @@ jobs:
       with:
         user: __token__
         password: ${{ secrets.pypi_password }}
+    - name: Download docs
+      uses: actions/download-artifact@master
+      with:
+        name: sphinx-docs
+        path: build/html
+    - name: Deploy to gh-pages
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.GH_PAT }}
+        BRANCH: gh-pages
+        FOLDER: docs/build/html
+
