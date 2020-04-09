@@ -40,6 +40,11 @@ jobs:
         pip install pytest
         pip install .
         pytest
+    - name: Upload dist
+      uses: actions/upload-artifact@master
+      with:
+        name: pypi-dist
+        path: dist
     - name: Build docs
       run: |
         pip install sphinx
