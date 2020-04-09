@@ -12,7 +12,7 @@ setup(
     version=versioneer.get_version(),
     description="My package",
     long_description=long_description,
-    long_description_content_type='text/markdown',
+    long_description_content_type="text/markdown",
     author="Curtis Hampton",
     author_email="CurtLHampton@gmail.com",
     url="https://github.com/CurtLH/my_pkg",
