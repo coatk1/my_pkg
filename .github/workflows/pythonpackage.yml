@@ -41,7 +41,7 @@ jobs:
       run: |
         pip install pytest
         pip install .
-        pytest
+        pytest -v
     - name: Upload dist
       uses: actions/upload-artifact@master
       with:
