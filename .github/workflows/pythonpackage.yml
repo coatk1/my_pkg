@@ -39,7 +39,7 @@ jobs:
         flake8 . --ignore=F401 --statistics --show-source
     - name: Test with pytest
       run: |
-        pip install pytest
+        pip install pytest-cov
         pip install .
         pytest -v
     - name: Upload dist
